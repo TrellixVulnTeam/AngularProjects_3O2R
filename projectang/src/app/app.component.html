@@ -1,0 +1,30 @@
+<h1>Hello Angular 12</h1>
+<p>Angular 12 представляет модульную архитектуру приложения</p>
+<textarea>
+    {{testVar}}
+    <br/>
+    {{count}}
+</textarea>
+<data-comp></data-comp>
+
+
+<p bold>Test bold</p>
+<label>{{tempName}}</label>
+<table border="1">
+    <tr><td [attr.colspan]="colspan">One-Two</td></tr>
+    <tr><td>Three</td><td>Four</td></tr>
+    <tr><td>Five</td><td>Six</td></tr>
+</table>
+
+<child-comp><h2>Добро пожаловать {{name}}!</h2></child-comp>
+<button (click) ="increase($event)">Click</button>
+<div><input [(ngModel)]="name" placeholder = "Модель" />
+    <button (click)="addItem(name)">Добавить</button>
+</div>
+<table>
+    <tr *ngFor="let item of items">
+        <td>{{item}}</td>
+    </tr>
+</table>
+<data-comp></data-comp>
+<data-comp></data-comp>
