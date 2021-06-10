@@ -29,6 +29,11 @@
   <p *while="!condition">
     Второй параграф
   </p>
+  <li *ngFor="let item in users">
+    <p>Имя пользователя: {{item?.name}}</p>
+    <p>Возраст пользователя: {{item?.age}}</p>
+        
+  </li>
   <p>Имя пользователя: {{user?.name}}</p>
   <p>Возраст пользователя: {{user?.age}}</p>
   {{user?.age}}

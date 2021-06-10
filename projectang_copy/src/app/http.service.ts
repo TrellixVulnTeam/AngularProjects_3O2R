@@ -9,4 +9,8 @@ export class HttpService{
     getData(){
         return this.http.get('assets/user.json')
     }
+getMultipleData()
+{
+    return this.http.get('asset/users.json');
+}
 }

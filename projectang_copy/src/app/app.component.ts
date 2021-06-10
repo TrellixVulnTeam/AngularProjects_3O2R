@@ -16,6 +16,7 @@ import {HttpService}from './http.service';
 export class AppComponent implements OnInit { 
     user: User | undefined;
  
+    users:User[]=[];
     name= "";
     exportValue:string="SomeText";
     tempName:string="Input name";
@@ -56,6 +57,7 @@ ngOnInit(): void {
     //this.http.get('assets/user.json').subscribe((data:any)=>this.user=new User(data.name, data.age));
   
      var ntm=this.http.getData().subscribe((data:any)=>this.user=new User(data.name, data.age));
+     this.http.getMultipleData().subscribe((data:any)=>this.users=data["userList"]);
     // console.log(ntm);
 
 }
