@@ -33,8 +33,13 @@ increase($event:any):void{
 
 /**
  *
- */
-constructor(private dataService:DataService, private http:HttpClient) {
+//  */
+// constructor(private dataService:DataService, private http:HttpClient) {
+    
+    
+// }
+
+constructor(private dataService:DataService, private http:HttpService) {
     
     
 }
@@ -48,9 +53,9 @@ ngOnInit(): void {
     //Add 'implements OnInit' to the class.
     this.items=this.dataService.getData();
 
-  var tmp=  this.http.get('assets/user.json').subscribe((data:any)=>this.user=new User(data.name, data.age));
-    console.log(tmp[0].age);
-    // var ntm=this.http.get('asset/user.json').subscribe((data:any)=>this.user=new User(data.name, data.age));
+    //this.http.get('assets/user.json').subscribe((data:any)=>this.user=new User(data.name, data.age));
+  
+     var ntm=this.http.getData().subscribe((data:any)=>this.user=new User(data.name, data.age));
     // console.log(ntm);
 
 }
