@@ -37,7 +37,10 @@
     <p>Directives' params</p>
  </div>
 
+ <div [style.backgroundColor]="isRed? 'red' : 'green'">Rc</div>
+    <div [style.background-color]="!isRed ? 'red' : 'green'">ggg</div>
+    <input type="checkbox" [(ngModel)]="isRed" />
  <div [class.isredbox]="isRed">is red</div>
-            <div [class.isredbox]="!isRed">not red</div>
+            <div [style.backgound-color]="!isRed ? 'green':'red'">not red</div>
             <input type="checkbox" [(ngModel)]="isRed" />
           
