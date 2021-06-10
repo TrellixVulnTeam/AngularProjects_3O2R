@@ -8,10 +8,14 @@ import {DataComponent} from './data.component';
 import { DataService } from './data.service';
 import {DataModule }from './data/ndata.module';
 import {BoldDirective}from './bold.directive';
+import {WhileDirective} from './while.directive';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
-    imports:      [ BrowserModule, FormsModule, DataModule ],
-    declarations: [ AppComponent, ChildComponent, DataComponent, BoldDirective ],
+    imports:      [ BrowserModule, FormsModule, DataModule, HttpClientModule ],
+
+    declarations: [ AppComponent, ChildComponent, DataComponent, BoldDirective, WhileDirective ],
     providers:   [DataService, LogService],
     bootstrap:    [ AppComponent ]
 })
