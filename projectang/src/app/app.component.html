@@ -6,8 +6,11 @@
     {{count}}
 </textarea>
 <data-comp></data-comp>
+<div class="borderDiv">
 
-
+    Border
+</div>
+<input type ="text" [(ngModel)]="exportValue"/>
 <p bold>Test bold</p>
 <label>{{tempName}}</label>
 <table border="1">
@@ -33,3 +36,8 @@
     <p [bold] selectedSize="28px" [defaultSize]="'14px'">Hello Angular</p>
     <p>Directives' params</p>
  </div>
+
+ <div [class.isredbox]="isRed">is red</div>
+            <div [class.isredbox]="!isRed">not red</div>
+            <input type="checkbox" [(ngModel)]="isRed" />
+          
